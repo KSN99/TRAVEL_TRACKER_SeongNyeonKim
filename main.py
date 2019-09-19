@@ -1,8 +1,8 @@
 """
-Name:
-Date:
+Name: SeongNyeon Kim
+Date: 19.09.2019
 Brief Project Description:
-GitHub URL:
+GitHub URL: https://github.com/JCUS-CP1404/jcus-cp1404-assg2-KSN99
 """
 # Create your main program in this file, using the TravelTrackerApp class
 
