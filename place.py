@@ -14,6 +14,12 @@ class Place:
     def __str__(self):
         """Two methods to mark the place as unvisited and visited"""
         if self.status == "y":
-            return "Unvisited place {} by {} ({})".format(self.name, self.country, self.status)
+            return "Unvisited place {} in {} ({})".format(self.name, self.country, self.status)
         else:
-            return "Visited place {} by {} ({})".format(self.name, self.country, self.status)
+            return "Visited place {} in {} ({})".format(self.name, self.country, self.status)
+
+    def m_visited(self, *args):
+        """visited place"""
+        if self.status == "y":
+            self.status == "n"
+            return self.status
