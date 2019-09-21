@@ -26,4 +26,33 @@ class PlaceCollection:
                 [Place(place_string[0], place_string[1], int(place_string[2], place_string[3].strip()))])
         readfile.close()
 
+    def save_places(self):
+        """Save places in CSV file"""
+        writefile = open('place.csv','w')
+        for place in self.list_place:
+            writefile.write(place[0].name + "," +place[0].country +","
+                            + str(place[0].priority)+"," + place[0].status + "\n")
+        writefile.close()
+
+    def add_place(self, name, country, priority):
+        """Add a new place in csv file"""
+        self.list_place.append([Place(name,country,priority, 'y')])
+
+    def get_num_unvisited_place(self):
+        """Get number of unvisited places """
+        visited_places =0
+        for place in self.list_place:
+            if place[0].status == 'y':
+                visited_places += 1
+        return visited_places
+
+    def sort(self, sort_list):
+        """Sort by the key passed in, then by priority"""
+        if sort_list == "name":
+            self.list_place.sort(key=lambda i: i[0].name)
+        elif sort_list == "country":
+            self.list_place.sort(key=lambda i: (i[0].country, i[0].name))
+        else:
+            self.list_place.sort(key=lambda i: (i[0].priority, i[0].name))
+
     pass
