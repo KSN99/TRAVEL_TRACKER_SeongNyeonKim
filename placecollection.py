@@ -42,7 +42,7 @@ class PlaceCollection:
         """Get number of unvisited places """
         visited_places =0
         for place in self.list_place:
-            if place[0].status == 'y':
+            if place[0].status == 'v':
                 visited_places += 1
         return visited_places
 

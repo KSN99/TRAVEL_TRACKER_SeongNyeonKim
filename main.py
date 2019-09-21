@@ -10,7 +10,13 @@ from kivy.app import App
 
 
 class TravelTrackerApp(App):
-    """..."""
+    """For installing Kivy application """
+    total_text =StringProperty()
+    status_text=StringProperty()
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.place_list = PlaceList()
     pass
 
 
