@@ -17,6 +17,17 @@ class TravelTrackerApp(App):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.place_list = PlaceList()
+
+    def build(self):
+        """Build the Kivy Gui"""
+        self.name = "Travel Tracker 2.0"
+        self.root = Builder.load_file('app.kv')
+        self.place_list.sort('name')
+        self.building_widgets()
+        self.place_buttons()
+        return  self.root
+
+
     pass
 
 
