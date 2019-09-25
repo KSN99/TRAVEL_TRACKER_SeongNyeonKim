@@ -1,58 +1,79 @@
-"""Place Collection for program"""
-
 from place import Place
 
-# Create your PlaceCollection class in this file
+
+class PlaceList:
+    """PlaceList class for reading list program"""
+    def __init__(self, ):
+        """Constructor - create empty place list  """
+        # To empty the list
+        self.places = []
 
 
-class PlaceCollection:
-    """This class will contain a single attribute: A List of Place objects
-    1.load places 2. save places 3. add place 4. get number of unvisited places 5.sort"""
 
-    def __init__(self,):
-        """For Empty place list"""
-        self.list_place = []
-        self.load_place()
+    def sorting(self, sort_method):
+        """Sort places list based on Title. country. and priority"""
+        #to sort data by the key passed, then by priority
+        if sort_method == "Country":
+            self.places.sort(key=lambda i: (i[0].country, i[0].title))
+        elif sort_method == "Title":
+            self.places.sort(key=lambda i: i[0].title)
+        elif sort_method == "Priority":
+            self.places.sort(key=lambda i: (i[0].priority, i[0].title))
+        else:
+            self.places.sort(key=lambda i: (i[0].status, i[0].title))
+        # append te place title country and priority
+    def append_Places(self, title, country, priority):
+        """Add a single place to main place list"""
+        # To adding place
+        self.places.append([Place(title, country, priority, 'y')])
 
-    def __str__(self):
-        return str([str(place) for place in self.list_place])
+    def place_get(self, title):
+        """Get a single place based on its title"""
+        # Method to let user selected single place object.
+        for place in self.places:
+            if place[0].title == title:
+                return place[0]
 
-    def load_place(self):
-        """Load place.csv file for place list"""
-        readfile = open('place.csv','r')
-        for place in readfile:
-            place_string = place.split(",")
-            self.list_place.append(
-                [Place(place_string[0], place_string[1], int(place_string[2], place_string[3].strip()))])
-        readfile.close()
+    def tovisit_places_count(self):
+        """Get the number of unvisited places need to visit"""
+        #to detect wether this place already been to or not
+        place_tovisit = 0
+        for place in self.places:
+            if place[0].status == 'y':
+                place_tovisit += 1
+        return place_tovisit
 
-    def save_places(self):
-        """Save places in CSV file"""
-        writefile = open('place.csv','w')
-        for place in self.list_place:
-            writefile.write(place[0].name + "," +place[0].country +","
-                            + str(place[0].priority)+"," + place[0].status + "\n")
-        writefile.close()
-
-    def add_place(self, name, country, priority):
-        """Add a new place in csv file"""
-        self.list_place.append([Place(name,country,priority, 'y')])
-
-    def get_num_unvisited_place(self):
-        """Get number of unvisited places """
-        visited_places =0
-        for place in self.list_place:
-            if place[0].status == 'v':
+    def visited_places_count(self):
+        """Get the number of visited places need to visit"""
+        #to detect wether this place already been to or not
+        visited_places = 0
+        for place in self.places:
+            if place[0].status == 'n':
                 visited_places += 1
         return visited_places
 
-    def sort(self, sort_list):
-        """Sort by the key passed in, then by priority"""
-        if sort_list == "name":
-            self.list_place.sort(key=lambda i: i[0].name)
-        elif sort_list == "country":
-            self.list_place.sort(key=lambda i: (i[0].country, i[0].name))
-        else:
-            self.list_place.sort(key=lambda i: (i[0].priority, i[0].name))
 
-    pass
+    def load_places(self):
+        #To laod the csv field from the place.csv
+        filereader = open('place.csv', 'r')
+        for place in filereader:
+            place_string = place.split(",")
+            self.places.append(
+                [Place(place_string[0], place_string[1], int(place_string[2]), place_string[3].strip())])
+
+        filereader.close()
+
+    def load_to_csv(self):
+        """load places in the csv file in a format"""
+        #Write the new data to the place.csv field
+        filewriter = open('place.csv', 'w')
+        for place in self.places:
+            filewriter.write(
+                place[0].title + "," + place[0].country + "," + str(place[0].priority) + "," + place[
+                    0].status + "\n")
+
+        filewriter.close()
+
+
+
+
