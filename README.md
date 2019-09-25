@@ -26,7 +26,7 @@ but I have learned a lot how to create graphical user interface, how to use the 
 and perseverance from a bunch of trials and errors.
 
 ## 3. What are you least satisfied with?
-    The least satisfied part of the process of this assignment was time management and some parts that I couldn't find
+  
 the solutions. After I completed the assignment1 successfully, I was a bit proud of myself and earned some kind of
 confidence because I made it for the first python work. It was a great motivation for programming, however,
 at the same time I was a bit unaware of the next assignment will be way harder. At the same time,
@@ -35,31 +35,38 @@ to think deeply and plan precisely for the build this project. Therefore I was n
 to be looked like what I desired, and it remains a lot in my mind.
 
 ## 4. What worked well in your development process?
-    I face a lot of obstacles when I am working on my assignment, I was trying to install Kivy for a while. Eventually, 
-    I feel really surprise at that time. I thought I have no ability to do the python with the graphical control.
-     and after that I help serval people for installing Kivy. I am feeling well by during helping others. 
-
+In my development process, the sequence of coding worked well. From previous assignment, I have learned that
+the sequence of developing functions are very important. Thus I tried to think which functions should be developed
+first and which should be the next. Especially, since we had to use classes for this assignment, they should be 
+completed first to be used. Therefore I started from developing classes, then the functions in order, I was able to
+face less errors.
 
 ## 5. What about your process could be improved the next time you do a project like this?
-    I think I need to learn more things in advance, by doing this I can do my assignment quicker and also using least word and function to finish that. 
-    Rumor says that, the programmer three is focus on the java language, so had better learn the language as early as I can. 
-    I think I will start from the online tutorial. If I am facing some difficulty, I will try to ask my lecture and some of my friend. 
-    I know in the advance area of python people aiming for lease code to do more thing. 
-    In the future job, I might code tens of thousands of the code in project, if my code is long and not simplify it will
-     consume lots of memory space and drag down the running speed of my project.  This is what I am aiming for as well. 
+ For the next project like this, I think the completeness and time planning could be improved. As mentioned above,
+since I started this project pretty late, I was not able to plan the working time and distribute work day by day.
+I just worked whenever I have time, so sometimes I worked too less and sometimes I worked too much so I felt exhausted.
+And I'm sure that it affected the completeness of the project as well. Since I have learned these from this assignment,
+I will more concern about the time managing and improve the completeness for the better project development.
 
 ## 6. Describe what learning resources you used and how you used them.
-
-    I used to review the lecture’s side and during the class I try to do lots of memo and make sure I know everything from the lecture slide.
-     Moreover, If I have problem in the class, I will also ask my clubmate (ID8), I am part of the member. I used to go their couple times per week for further learning. 
+Resources that I used was lecture slides and kivy demos and practicals. Firstly, I was not really sure about
+the concept of using classes that was really important for this assignment. Thus I reviewed lecture slides carefully
+until I get the concepts. Then, actually kivy demos were the most helpful resources to complete this assignment.
+Although the lecture slides are explaining by words, sometimes I was not sure about how to apply. Since kivy demos
+were showing a various use and methods, it was really useful. For example when I try to show message when a button
+is clicked, I found a demo that has the same feature as an example, so that I was able to apply it easily.
+Recent practicals also helpful to create and use classes that was required to this assignment. I scanned the file
+structures and functions then I tried to apply it into my assignment.
 
 ## 7. Describe the main challenges or obstacles you faced and how you overcame them.
 
-    The main challenge for me is I KIVY. Firstly, I never touch this kind of things before, 
-    so I don’t know where I should start at the first time. However, I made some research for KIVY. 
-    Even watch from the YouTube tutorial for KIVY. All in all I overcome it.  
+The main challenges were unorganized python information and lack of usage skills. It was the first time to learn a
+programming language this semester, so I have learned a lot of new knowledge. However at the same time, all
+the bunch of information were not organized well in my mind these days, besides I was not sure how can I apply the
+coding knowledge that I have learned. Therefore, during I work on this assignment, I reviewed lectures and practicals
+again and again until I get the point, and sometimes I searched to watch other tutorials explaining the parts
+that I was not really sure about. So my progress was not so speedy in the first few days, however after that I could
+speed up a bit and finished my assignment. 
 
 ## 8. Briefly describe your experience using classes and if/how they improved your code.
-    I am the student let get really low score in the assignment one because of the used only two function in the assignment after 
-    that I fell really regret so this, I really use the class well. 
-    Not only because of the higher grade , but also because the well behavior for being a programmer. 
+It was the first time that I used class code. By using it , now I can code more efficiently rather than before.
